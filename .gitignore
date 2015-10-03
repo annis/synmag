@@ -1,0 +1,18 @@
+# Complied python modules
+*.pyc
+
+# VIM cached files
+*~
+
+# data directory with numpy replacing healpy files
+data-np/
+
+# Notes to myself
+Notes
+
+# tar files
+*.tar
+*.tar.gz
+
+# junk files
+jack*

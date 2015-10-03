@@ -1,0 +1,41 @@
+Dear all,
+
+Please find newly generated system response curves in
+http://home.fnal.gov/~wester/work/filter_curves.tar
+
+This tar file has *.txt and *.dat files with equivalent information.
+The file name encodes the filter type (n is for the None filter).
+So, u_003.dat is for the u-Filter.
+
+The files have 5 columns as follows:
+
+(measured wavelength) (response) (response-radius1)(response-radius2)(response-radius3)(response-radius4)
+
+where the (response) is photodiode and gain normalized ON-OFF reduced DECal data:
+the average (over all relevant amplifiers)
+of the median (over all the little boxes of 18 col x 25 rows that I divide up each amplifier)
+of the truncated means (I only use the middle 68% of the pixels in each little box)
+of the ON-OFF exposure divided by the photodiode 3 current 
+and divided by a correction factor that is proportional to the gain of the amplifier.
+
+I exclude amplifiers from non-science devices, ccdnum=61, and for the 10 CCD with 11 especially non-linear amplifiers. 
+I also exclude data points where the measured wavelength has a fwhm >10nm.
+
+(response) = average over all non-exluded amplifiers - you might look only at this column.
+
+The other colums are separated by radius from an inner radius to an outer radius.
+(response-radius1) = (response) averaged only for the inner two CCDs (<10% RMax)
+(response-radius2) = (response) for 10<Rmax<30%
+(response-radius3) = (response) for 30<Rmax<60%
+(response-radius4) = (response) for Rmax>60%
+
+The *.dat files should generally be used. 
+
+The *.txt files are larger and are identical for all the filters. Each line corresponds to a wavelength. 
+There are 405 lines from a center of 296 - 1104nm. If a measurement was not made then the entry for that 
+wavelength is 0.000000. These might be useful, for reading in files with Excel or something and then 
+dividing out filter data by no-Filter data.
+
+Let me know if this makes sense,
+
+William

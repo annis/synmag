@@ -1,0 +1,13 @@
+Readme
+    this file
+uvspec_afglus_pressure780_airmass1.3_asea1_avul1_pw03_tau0.03.out.txt
+    Ting Li's airmass = 1.3 CTIO atmosphere
+filter_curves.tar
+filter_curves/
+    William Wester's 2013 System (instrument) response curves
+decal_response_email.txt
+    description of William Wester's 2013 System (instrument) response curves
+20130322.tar
+    Ann Bauer's combining of Wester+Li
+system_atm_tput.csv
+    Doug Tucker/Calibration wiki version of Ann Bauer's combining of Wester+Li
